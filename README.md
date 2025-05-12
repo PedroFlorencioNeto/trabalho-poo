@@ -7,7 +7,6 @@
 - Maria Fernanda
 - Pedro Florencio
 - Vinícius Arrais
----
 
 Este repositório contém um projeto desenvolvido como parte da disciplina de **Programação Orientada a Objetos (POO)** dos cursos de **Inteligência Artificial** e **Análise e Desenvolvimento de Sistemas** da **Universidade de Fortaleza (UNIFOR)**.
 
