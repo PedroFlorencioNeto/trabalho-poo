@@ -3,6 +3,7 @@
 ### Grupo 15
 
 - Cícero Felipe
+- Gabriel Santos
 - Marcos Felipe
 - Maria Fernanda
 - Pedro Florencio

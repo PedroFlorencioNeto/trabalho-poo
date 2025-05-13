@@ -1,9 +1,11 @@
 public class Aluno extends Pessoa{
 
+    // atributo unico que representa um aluno
     protected String matricula;
 
-    public Aluno(String _cpf, String _nome, int _idade, String matricula){
-        super(_cpf, _nome, _idade);
+    // metodo construtor da classe Aluno
+    public Aluno(String cpf, String nome, int idade, String matricula) {
+        super(cpf, nome, idade);
         this.matricula = matricula;
     }
 

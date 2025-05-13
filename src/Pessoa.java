@@ -5,12 +5,14 @@ public abstract class Pessoa{
     protected String nome;
     protected int idade;
 
-    public Pessoa(String _cpf, String _nome, int _idade){
-        cpf = _cpf;
-        nome = _nome;
-        idade = _idade;
+    // metodo construtor da classe Pessoa
+    public Pessoa(String cpf, String nome, int idade) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.idade = idade;
     }
 
+    // getters e setters dos atributos
     public String getCpf() {
         return cpf;
     }
@@ -35,11 +37,13 @@ public abstract class Pessoa{
         this.idade = idade;
     }
 
+    // metodo que incrementa idade
     public void fazerAniversario() {
         int aniversario = getIdade()+1;
         System.out.println("Parabéns por fazer "+aniversario+" anos");
     }
 
+    // adicionando metodo toString() que exibe os atributos da classe
     @Override
     public String toString() {
         return "Pessoa{" +
