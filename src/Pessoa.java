@@ -1,55 +1,54 @@
-import java.lang.System;
-
-public abstract class Pessoa{
+public abstract class  Pessoa {
+    //atributos
     protected String cpf;
-    protected String nome;
     protected int idade;
+    protected String nome;
 
-    // metodo construtor da classe Pessoa
-    public Pessoa(String cpf, String nome, int idade) {
-        this.cpf = cpf;
+    //Construtor
+    public Pessoa(String nome, int idade, String cpf) {
         this.nome = nome;
         this.idade = idade;
+        this.cpf = cpf;
     }
 
-    // getters e setters dos atributos
-    public String getCpf() {
+    //método para incrementar um ano na idade da pessoa
+    public void fazerAniversario(){
+        int aniversario = idade + 1;
+    }
+
+    //gets e sets
+    public String getCpf(){
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf (String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public int getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
+    public void setIdade (int idade) {
         this.idade = idade;
     }
 
-    // metodo que incrementa idade
-    public void fazerAniversario() {
-        int aniversario = getIdade()+1;
-        System.out.println("Parabéns por fazer "+aniversario+" anos");
+    public String getNome() {
+        return nome;
     }
 
-    // adicionando metodo toString() que exibe os atributos da classe
+    public void setNome (String nome) {
+        this.nome = nome;
+    }
+
+
+    /* Faz sobrecarga no método toString */
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "cpf='" + cpf + '\'' +
-                ", nome='" + nome + '\'' +
-                ", idade=" + idade +
+        return "Pessoa { " +
+                "nome = " + nome +
+                ", idade = " + idade +
+                ", cpf = " + cpf +
                 '}';
     }
 }

@@ -1,19 +1,25 @@
 public class Professor extends Pessoa{
-    protected String centro;
+    //atributo
+    private String centro;
 
-    public Professor(String _cpf, String _nome, int _idade){
-        super(_cpf, _nome, _idade);
+    //Construtor
+    public Professor(String nome, int idade, String cpf) {
+        //Chama o construtor da classe Pessoa(Classe Pai)
+        super(nome, idade, cpf);
     }
 
+    //gets e sets
     public String getCentro() {
         return centro;
     }
 
-    public void setCentro(String centro) {
+    public void setCentro (String centro) {
         this.centro = centro;
     }
 
-    public void darAula(){
-        System.out.println("Aula dada!");
+    //métodos
+    public void darAula() {
+        System.out.println("O professor dar aula!");
     }
+
 }

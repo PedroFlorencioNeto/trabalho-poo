@@ -1,29 +1,34 @@
 import java.util.ArrayList;
-import java.lang.String;
-
 public class Turma {
-    protected String codigoTurma;
-    protected Disciplina disciplina;
-    protected Professor professor;
-    protected ArrayList<Aluno> alunos;
+    //Associação e Composição
+    private String codigo;
+    private Disciplina disciplina;
+    private Professor professor;
+    private ArrayList<Aluno> alunos;
 
-    public void setCodigoTurma(String codigoTurma) {
-        this.codigoTurma = codigoTurma;
+    //Construtores
+    public  Turma (String codigo, Disciplina disciplina, Professor professor) {
+        this.codigo = codigo;
+        this.disciplina = disciplina;
+        this.professor = professor;
+        this.alunos = new ArrayList<>();
     }
 
+
+    //gets e sets
     public Disciplina getDisciplina() {
         return disciplina;
     }
 
-    public void setDisciplina(Disciplina disciplina) {
+    public void setDisciplina (Disciplina disciplina) {
         this.disciplina = disciplina;
     }
 
-    public Professor getProfessor() {
+    public Professor getProfessor () {
         return professor;
     }
 
-    public void setProfessor(Professor professor) {
+    public void setProfessor (Professor professor) {
         this.professor = professor;
     }
 
@@ -31,23 +36,42 @@ public class Turma {
         return alunos;
     }
 
-    public void setAlunos(ArrayList<Aluno> alunos) {
+    public void setAlunos (ArrayList<Aluno> alunos) {
+
         this.alunos = alunos;
     }
+    public String getCodigo() {
+        return codigo;
+    }
 
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    //métodos
     public void adicionarAluno(Aluno aluno) {
-        this.alunos.add(aluno);
+        alunos.add(aluno);
     }
 
     public void removerAluno(Aluno aluno) {
-        this.alunos.remove(aluno);
+        alunos.remove(aluno);
     }
 
-    public void listarAluno() {
-        for (int i = 0; i < alunos.size(); i++) {
-            Aluno aluno = alunos.get(i);
-            System.out.println("Aluno: "+ i+" - "+ aluno.getNome());
-            System.out.println("Matricula: "+aluno.getMatricula());
+    public void listarAlunos() {
+        System.out.println("Todos os alunos da turma " + codigo + " : ");
+        for (Aluno aluno : alunos) {
+            System.out.println (" * " + aluno.getNome());
         }
     }
-} 
+
+    @Override
+    public String toString() {
+        return "Turma" + "\n" +"{ " +
+                "código = " + codigo + "\n" +
+                "disciplina = " + disciplina + "\n" +
+                "professor = " + professor + "\n" +
+                "alunos = " + alunos +
+                " } ";
+    }
+}
+
